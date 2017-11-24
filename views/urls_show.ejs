@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TinyApp</title>
+</head>
+<body>
+<p>Url:</p>
+
+<h3><a href='/u/'> http://localhost:3000/u/<%= url %></h3> </a>
+<p>Navigates to</p>
+<h3><a href=''><%= long %></h3> </a>
+
+<form action="/urls/<%= url  %>" method="POST">
+<input class="form-control" id="newURL" type="text" name="newURL" value="<%= long %>">
+</form>
+
+<form action="/urls/<%= url %>/delete" method="POST" align='right'>
+<input class="form-control" type="submit" name="newURL" value='Delete'>
+</form>
+
+<a href="/urls"> Back To Index</a>
+</body>
+</html>

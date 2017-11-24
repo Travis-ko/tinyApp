@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{ TinyApp }</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS for Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- My CSS -->
+  <link type='text/css' rel='stylesheet' href='/stylesheets/style.css'>
+
+
+</head>
+<body>
+  <div>
+
+    <%- include('partials/_header') %>
+
+    <h1>
+      Tiny App
+    </h1>
+
+    <h3>
+      Make Your URL's Slightly Shorter!
+    </h3>
+
+    <!-- Shows Please Sign in -->
+    <% if (username === undefined) { %>
+      <h2>{ Please login }</h2>
+    <% } %>
+
+  </div>
+
+  <!-- jQuery -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

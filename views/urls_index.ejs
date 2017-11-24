@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head >
+  <title>TinyApp</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS for Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- My stylesheet -->
+  <link type='text/css' rel='stylesheet' href='/stylesheets/style.css'>
+
+
+  <%- include('partials/_header') %>
+
+</head>
+<body>
+   <div>
+    <h1 id='archiveTitle'>{ Url Archive }</h1>
+  </div>
+
+  <% if (username === undefined) { %>
+    <h2>
+      <p> 401 </p>
+      <p> Please Sign In </p>
+    </h2>
+  <% } else { %>
+
+    <div>
+      <table class="table">
+
+        <!-- This is the Header of the Table -->
+        <thead>
+          <tr>
+            <th>
+              Short Url
+            </th>
+            <th>
+              Full Url
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <!-- There is the dynamic table-->
+        <tbody>
+        <% for(let link in url) { %>
+          <tr>
+
+            <!-- First Column, the shortURL -->
+            <td>
+              <a >
+                http://localhost:3000/u/<%= link %>
+              </a>
+            </td>
+
+            <!-- Second Column, the longURL -->
+            <td >
+              <form action="/urls/<%= link  %>" method="POST">
+                <input class="form-control" id="newURL" type="text" name="newURL" value="<%= url[link].longURL %>">
+              </form>
+
+            <!-- Third Column, the delete button -->
+            <td>
+                <form >
+                  <input class="form-control" type="submit" name="newURL" value='Delete'>
+                </form>
+            </td>
+          </tr>
+        <% } %>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+<!--   -->
+  <!-- Javascript for contenteditable table -->
+
+<!-- jQuery -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

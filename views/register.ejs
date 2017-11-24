@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head >
+
+  <title>TinyApp</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS for Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class='container'>
+
+    <!-- Title -->
+  <h1>
+    Registration
+  </h1>
+    <div align='center'>
+
+    <!-- This is where you put in email and password to register -->
+      <form action="/register" method='POST'>
+
+        <!-- email -->
+        <input type="text" class="form-control" placeholder="email@example.com" name='email' >
+
+        <!-- Spacer -->
+        <div>
+          <br>
+        </div>
+
+        <!-- password -->
+        <input type="password" class="form-control" placeholder="password" name='password' >
+
+
+        <!-- Spacer -->
+        <div>
+          <br>
+        </div>
+
+        <!-- Button -->
+        <input class="form-control" type="submit" name="Submit">
+
+      </form>
+    </div>
+  </div>
+<!--   -->
+<!-- jQuery -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
